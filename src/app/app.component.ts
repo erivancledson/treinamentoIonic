@@ -1,10 +1,22 @@
+
+import { ToastPage } from './../pages/toast/toast';
+import { SlidePage } from './../pages/slide/slide';
+import { SearchPage } from './../pages/search/search';
+import { LoadingPage } from './../pages/loading/loading';
+import { CardsNoticePage } from './../pages/cards-notice/cards-notice';
+import { FabsPage } from './../pages/fabs/fabs';
+import { ModalPage } from './../pages/modal/modal';
+import { CarregandoPage } from './../pages/carregando/carregando';
+
+import { MyCardsPage } from './../pages/my-cards/my-cards';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { LoginPage } from './../pages/login/login';
+import { ListaPage } from './../pages/lista/lista';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,9 +32,21 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
+    //aqui fica o menu
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Cards', component: MyCardsPage},
+      { title: 'Lista', component: ListaPage},
+      { title: 'Login', component: LoginPage},
+      { title:'Carregando', component: CarregandoPage},
+      { title:'Modal', component: ModalPage},
+      { title: 'Fabs', component: FabsPage},
+      { title: 'Cards Notice', component: CardsNoticePage},
+      {title: 'Loading', component: LoadingPage},
+      {title: 'Search', component: SearchPage},
+      {title:'Slide', component: SlidePage},
+      {title: 'Toast', component: ToastPage},
+   
     ];
 
   }
